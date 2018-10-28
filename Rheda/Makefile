@@ -21,6 +21,9 @@ dev:
 unit:
 	php bin/unit.php
 
+freygen:
+	php ../Frey/bin/clientGen.php Rheda > src/helpers/FreyClient.php
+
 check: lint unit
 
 autofix:

@@ -48,10 +48,13 @@ if (file_exists(__DIR__ . '/local/index.php')) {
         const API_VERSION_MAJOR = 1;
         const API_VERSION_MINOR = 0;
         const DEBUG_MODE = true; // TODO -> to false in prod!
-        const API_ADMIN_TOKEN = 'CHANGE_ME'; // TODO -> change it on prod!
 
         public static function API_URL() {
             return getenv('MIMIR_URL');
+        }
+
+        public static function AUTH_API_URL() {
+            return getenv('FREY_URL');
         }
     }
 }
